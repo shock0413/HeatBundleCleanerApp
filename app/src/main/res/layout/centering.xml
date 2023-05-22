@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/centeringView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_fieldset_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/steelblue"
+            android:padding="10dp"
+            android:text="수동 조작"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:gravity="center"
+            android:rowCount="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="3">
+
+                <Button
+                    android:id="@+id/tubesheetLaserOnButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    android:text="레이저 스캐너 ON"/>
+
+                <Button
+                    android:id="@+id/tubesheetLaserOffButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    android:text="레이저 스캐너 OFF"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tubesheetJogUpButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:text="조그상승"/>
+
+            <ToggleButton
+                android:id="@+id/tubesheetAccelerateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/toggle_button_on"
+                android:textColor="@color/white"
+                android:text="가속모드"/>
+
+            <Button
+                android:id="@+id/tubesheetJogLeftButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="조그좌측"/>
+
+            <Button
+                android:id="@+id/tubesheetJogRightButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="20dp"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="조그우측" />
+
+            <Button
+                android:id="@+id/tubesheetJogDownButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="조그하강" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <GridLayout
+                android:rowCount="1"
+                android:columnCount="6"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    android:id="@+id/tubesheetFirstForwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:id="@+id/tubesheetSecondForwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:id="@+id/tubesheetThirdForwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:id="@+id/tubesheetFirstBackwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:id="@+id/tubesheetSecondBackwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="4"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:id="@+id/tubesheetThirdBackwardSensor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="5"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:background="@color/red"/>
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/tubesheetNozelForwardButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:text="노즐 전진" />
+
+            <Button
+                android:id="@+id/tubesheetNozelBackwardButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:text="노즐 후진"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/centeringConfirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/ripple_background"
+        android:textColor="@color/white"
+        android:text="완료"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+</LinearLayout>

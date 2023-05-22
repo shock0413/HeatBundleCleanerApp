@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <ProgressBar
+            android:id="@+id/socketCheckProgressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:indeterminateDrawable="@drawable/progress"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/logo2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/settingButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/hlogo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="Exchanger Bundle Auto Cleaner"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <Button
+                android:id="@+id/centeringButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/centering_button_layout"
+                android:drawablePadding="10dp"
+                android:text="튜브 시트와 센터링 확인"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/new_cleaning_button_layout"
+                android:text="새로운 세척"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/relayButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/relay_cleaning_button_layout"
+                android:text="이어하기"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/manualButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/manual_button_layout"
+                android:text="수동 운전"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/testButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/test_cleaning_button_layout"
+                android:text="시험 운전"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/closeButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/test_cleaning_button_layout"
+                android:text="종료"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue"
+                android:padding="10dp"
+                android:text="작업 설정"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:columnCount="2"
+                android:gravity="center"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/workNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="10dp"
+                    android:text="공사 번호"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/workNumber"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="0"
+                    android:textCursorDrawable="@drawable/cursor_background"
+                    android:textSelectHandle="@drawable/select_handler"
+                    android:textSelectHandleLeft="@drawable/select_handler"
+                    android:textSelectHandleRight="@drawable/select_handler"
+                    android:theme="@style/editText"
+                    android:layout_margin="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <Button
+                android:id="@+id/secondPreButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/home_button_layout"
+                android:background="@drawable/ripple_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="처음으로"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/secondNextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/next_button_layout"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/ripple_background"
+                android:text="다음"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="좌측 상단과 우측 하단의 점으로 사각형 범위를 지정합니다.\n충돌 위험 여부를 확인해주세요."
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/originBundleDraw"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/motorPositionSettingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="좌측 상단 원점 위치를 확인해주세요."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_fieldset_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/steelblue"
+                    android:padding="10dp"
+                    android:text="수동 조작"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/centeringLaserOnButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:background="@drawable/ripple_background"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:layout_margin="5dp"
+                        android:text="스캐너 레이저 ON"/>
+
+                    <Button
+                        android:id="@+id/centeringLaserOffButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:background="@drawable/ripple_background"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:layout_margin="5dp"
+                        android:text="스캐너 레이저 OFF"/>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="3"
+                    android:gravity="center"
+                    android:rowCount="2">
+
+                    <Button
+                        android:id="@+id/centeringJogUpButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="20dp"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="조그상승"/>
+
+                    <ToggleButton
+                        android:id="@+id/centeringAccelerateButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="20dp"
+                        android:background="@drawable/toggle_button_on"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="가속모드"/>
+
+                    <Button
+                        android:id="@+id/centeringJogLeftButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="조그좌측"/>
+
+                    <Button
+                        android:id="@+id/centeringJogRightButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="조그우측"/>
+
+                    <Button
+                        android:id="@+id/centeringJogDownButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="20dp"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="조그하강"/>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="4">
+
+                    <GridLayout
+                        android:rowCount="1"
+                        android:columnCount="6"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_columnSpan="2">
+
+                        <TextView
+                            android:id="@+id/centeringFirstForwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:background="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/ceteringSecondForwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:background="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/centeringThirdForwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="2"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:layout_columnWeight="1"
+                            android:background="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/centeringFirstBackwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="3"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:background="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/centeringSecondBackwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="4"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:background="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/centeringThirdBackwardSensor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="5"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:layout_columnWeight="1"
+                            android:background="@color/red"/>
+
+                    </GridLayout>
+
+                    <Button
+                        android:id="@+id/centeringNozelForwardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="15dp"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="노즐 전진" />
+
+                    <Button
+                        android:id="@+id/centeringNozelBackwardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="15dp"
+                        android:background="@drawable/ripple_background"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="노즐 후진"/>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:columnCount="2"
+                android:rowCount="1">
+
+                <Button
+                    android:id="@+id/thirdPreButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/previous_button_layout"
+                    android:gravity="center"
+                    android:background="@drawable/ripple_background"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:text="이전"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <Button
+                    android:id="@+id/thirdNextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/confirm_layout"
+                    android:background="@drawable/ripple_background"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="확인"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </GridLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:indeterminateDrawable="@drawable/scan_loading_progress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="스캔 중 입니다..."
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- 홀 추가 및 제거 화면 -->
+    <LinearLayout
+        android:id="@+id/editHoleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/addEditHoleButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="@drawable/toggle_button_on"
+                android:textColor="@color/white"
+                android:text="추가 모드"/>
+
+            <ToggleButton
+                android:id="@+id/removeEditHoleButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/toggle_button_off"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="제거 모드"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/editHoleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/editHoleBackButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:drawableLeft="@drawable/previous_button_layout"
+                android:layout_weight="1"
+                android:text="이전"/>
+
+            <Button
+                android:id="@+id/editHoleConfirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:drawableLeft="@drawable/confirm_layout"
+                android:layout_weight="1"
+                android:text="완료"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fifthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignBounds"
+        android:orientation="vertical"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="상태 알림 메시지"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/alarmMessageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                    android:background="@color/steelblue"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/alarmMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="상태 알림 메시지"
+                android:textColor="@color/black"
+                android:textSize="26dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="에러 알림 메시지"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <Button
+                        android:id="@+id/errorMessageListButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/error_message_list_button_background"
+                        android:text="0"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/errorMessageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                    android:background="@color/steelblue"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="에러 알림 메시지"
+                android:textColor="@color/black"
+                android:textSize="26dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/skipNextHoleButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/skip_next_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="건너뛰기"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/positionChangeButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/position_change_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="세척 위치 변경"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/pressurizeOrDumpButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/pressure_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="가압 선택"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cleaningLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="세척 화면"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/cleaningDisplayButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                    android:background="@color/steelblue"
+                    android:textColor="@color/white">
+
+                </ImageButton>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cleaningView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/gray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cctvLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="CCTV 화면"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/cctvDisplayButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                    android:background="@color/steelblue"
+                    android:textColor="@color/white">
+
+                </ImageButton>
+
+            </LinearLayout>
+
+            <org.videolan.libvlc.util.VLCVideoLayout
+                android:id="@+id/rtspView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/cleaningProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progressbar_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/cleaningManualLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/steelblue"
+                    android:padding="10dp"
+                    android:text="수동 조작"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/cleaning_manual_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                    android:background="@color/steelblue"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/cleaning_jog_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:gravity="center"
+                android:rowCount="3">
+
+                <Button
+                    android:id="@+id/cleaningJogUpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:padding="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그상승"/>
+
+                <ToggleButton
+                    android:id="@+id/cleaningAccelerateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:padding="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="가속모드"/>
+
+                <Button
+                    android:id="@+id/cleaningJogLeftButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그좌측"/>
+
+                <Button
+                    android:id="@+id/cleaningJogRightButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그우측" />
+
+                <Button
+                    android:id="@+id/cleaningJogDownButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그하강" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/cleaning_nozzle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3">
+
+                <GridLayout
+                    android:rowCount="1"
+                    android:columnCount="6"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_columnSpan="2">
+
+                    <TextView
+                        android:id="@+id/cleaningFirstForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/cleaningSecondForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/cleaningThirdForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:layout_columnWeight="1"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/cleaningFirstBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="3"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/cleaningSecondBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="4"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/cleaningThirdBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="5"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:layout_columnWeight="1"
+                        android:background="@color/red"/>
+
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/cleaningNozelForwardButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:padding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="노즐 전진" />
+
+                <Button
+                    android:id="@+id/cleaningNozelBackwardButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:padding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="노즐 후진"/>
+            </GridLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/pause_button_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="일시정지"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/stop_button_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="중지"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/sixthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="9"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/selector_fieldset_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:background="@color/steelblue"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="세척 완료"
+                android:layout_alignParentTop="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="공사 번호"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/resultWorkNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="세척 시작 시간"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/startDateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="세척 종료 시간"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/endDateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="소요 시간"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/runTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="전체 홀 개수"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/totalHoleCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="세척 홀 개수"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/cleaningHoleCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="미세척 홀 개수"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/noCleaningHoleCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_row="5"
+            android:layout_gravity="fill"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/resultView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/retry_layout"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:text="미세척 홀 재시도"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sixthConfirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/confirm_layout"
+                android:padding="10dp"
+                android:background="@drawable/ripple_background"
+                android:textColor="@color/white"
+                android:text="완료"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!--
+    <ScrollView
+        android:id="@+id/manualLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+    </ScrollView>
+    -->
+
+    <LinearLayout
+        android:id="@+id/manualLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/selector_fieldset_background"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/steelblue"
+            android:padding="5dp"
+            android:text="내부수동"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue"
+                android:padding="5dp"
+                android:text="스캐너 레이저 작동"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/laserOnButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="스캐너 레이저 ON" />
+
+                <Button
+                    android:id="@+id/laserOffButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="스캐너 레이저 OFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue"
+                android:padding="5dp"
+                android:text="조그작동"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:rowCount="1">
+
+                <Button
+                    android:id="@+id/homePositionSettingButton"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="원점 위치 설정" />
+
+                <Button
+                    android:id="@+id/xHomeButton"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="X축 원점 이동" />
+
+                <Button
+                    android:id="@+id/yHomeButton"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Z축 원점 이동" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:columnCount="3"
+                android:gravity="center"
+                android:rowCount="3">
+
+                <Button
+                    android:id="@+id/jogUpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그상승" />
+
+                <ToggleButton
+                    android:id="@+id/accelerateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/toggle_button_on"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="가속모드"/>
+
+                <Button
+                    android:id="@+id/jogLeftButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그좌측" />
+
+                <Button
+                    android:id="@+id/jogRightButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그우측" />
+
+                <Button
+                    android:id="@+id/jogDownButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="조그하강" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/steelblue"
+                android:padding="5dp"
+                android:text="노즐작동"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3">
+
+                <GridLayout
+                    android:rowCount="1"
+                    android:columnCount="6"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_columnSpan="2">
+
+                    <TextView
+                        android:id="@+id/manualFirstForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/manualSecondForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/manualThirdForwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:padding="5dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/manualFirstBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="3"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/manualSecondBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="4"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/manualThirdBackwardSensor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_row="0"
+                        android:layout_column="5"
+                        android:padding="5dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:background="@color/red"/>
+
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/allNozelForwardButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="노즐 전진" />
+
+                <Button
+                    android:id="@+id/allNozelBackwardButton"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ripple_background"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="노즐 후진" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/manualConfirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/previous_button_layout"
+            android:text="이전"
+            android:background="@drawable/ripple_background"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:background="@drawable/selector_fieldset_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true">
+
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:background="@color/steelblue"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="에러 메시지 리스트"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:id="@+id/errorMessageListTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이상 내역"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAlignment="center"
+                    android:background="@drawable/table_field_border"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="설명"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAlignment="center"
+                    android:background="@drawable/table_field_border"
+                    android:textColor="@color/white"/>
+
+                <!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="조치 사항"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAlignment="center"
+                    android:background="@drawable/table_field_border"
+                    android:textColor="@color/white"/>
+                -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="발생 시간"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAlignment="center"
+                    android:background="@drawable/table_field_border"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이상 해제 시간"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textAlignment="center"
+                    android:background="@drawable/table_field_border"
+                    android:textColor="@color/white"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/errorMessageListClearButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="모두 지우기"/>
+
+        <Button
+            android:id="@+id/errorMessageListConfirmButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="확인"/>
+
+    </LinearLayout>
+
+</LinearLayout>
